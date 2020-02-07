@@ -1,19 +1,20 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
 gem 'active_model_serializers', '~> 0.10.0'
-gem 'decent_exposure', '3.0.0'
+gem 'acts_as_list'
+gem 'decent_exposure', github: 'hashrocket/decent_exposure', branch: 'master'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.1'
 
-
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i(mri mingw x64_mingw)
+  gem 'rspec_api_documentation'
 end
 
 group :development do
@@ -23,4 +24,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i(mingw mswin x64_mingw jruby)
