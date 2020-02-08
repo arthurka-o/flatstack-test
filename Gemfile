@@ -12,13 +12,13 @@ gem 'decent_exposure', github: 'hashrocket/decent_exposure', branch: 'master'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.1'
+gem 'rspec_api_documentation'
 
 group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
   gem 'factory_bot_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
-  gem 'rspec_api_documentation'
 end
 
 group :development do
