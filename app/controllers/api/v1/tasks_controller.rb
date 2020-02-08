@@ -1,31 +1,38 @@
-class Api::V1::TasksController < ApplicationController
+class Api::V1::TasksController < ApiController
   expose :project
   expose :task, scope: -> { project.tasks }, build_params: :task_params
   expose :tasks, -> { project.tasks.order(position: :asc) }
 
   def index
-    render json: tasks
+    success(tasks)
+  end
+
+  def show
+    success(task)
   end
 
   def create
     if task.save
-      render json: task
+      success(task, 201)
     else
-      render json: task.errors
+      render json: task.errors, status: 400
     end
   end
 
   def update
     if task.update(task_params)
-      render json: task
+      success(task)
     else
-      render json: task.errors
+      error(task.errors)
     end
   end
 
   def destroy
-    status = task.destroy ? 200 : 400
-    head status
+    if task.destroy
+      success
+    else
+      error(task.errors)
+    end
   end
 
   private

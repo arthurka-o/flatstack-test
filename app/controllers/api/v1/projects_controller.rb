@@ -1,30 +1,37 @@
-class Api::V1::ProjectsController < ApplicationController
+class Api::V1::ProjectsController < ApiController
   expose :projects, -> { Project.order(created_at: :desc) }
   expose :project, build_params: :project_params
 
   def index
-    render json: projects
+    success(projects)
+  end
+
+  def show
+    success(project)
   end
 
   def create
     if project.save
-      render json: project
+      success(project, 201)
     else
-      render json: project.errors
+      error(project.errors)
     end
   end
 
   def update
     if project.update(project_params)
-      render json: project
+      success(project)
     else
-      render json: project.errors
+      error(project.errors)
     end
   end
 
   def destroy
-    status = project.destroy ? 200 : 400
-    head status
+    if project.destroy
+      success
+    else
+      error(project.errors)
+    end
   end
 
   private
