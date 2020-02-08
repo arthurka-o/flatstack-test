@@ -7,6 +7,7 @@ end
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'acts_as_list'
+gem 'apitome', github: 'jejacks0n/apitome', branch: 'master'
 gem 'decent_exposure', github: 'hashrocket/decent_exposure', branch: 'master'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -14,6 +15,9 @@ gem 'rails', '~> 5.1.1'
 
 group :development, :test do
   gem 'byebug', platforms: %i(mri mingw x64_mingw)
+  gem 'factory_bot_rails'
+  gem 'pry-rails'
+  gem 'rspec-rails'
   gem 'rspec_api_documentation'
 end
 
