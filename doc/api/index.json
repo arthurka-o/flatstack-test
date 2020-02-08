@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "name": "Projects",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Get an project",
+          "link": "projects/get_an_project.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing projects",
+          "link": "projects/listing_projects.json",
+          "groups": "all",
+          "route": "/api/v1/projects",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "resource": "Projects",
+  "resource_explanation": null,
+  "http_method": "GET",
+  "route": "/api/v1/projects/:id",
+  "description": "Get an project",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/v1/projects/21",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[binary data]",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"5ad12c5f869ed459ce5b380958f90f15\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e70eff21-eb0f-4a48-9179-892242fa31ec",
+        "X-Runtime": "0.004550",
+        "Content-Length": "25"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
