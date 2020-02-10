@@ -1,0 +1,42 @@
+{
+  "resource": "Tasks",
+  "resource_explanation": null,
+  "http_method": "PATCH",
+  "route": "/api/v1/projects/:project_id/tasks/:task_id",
+  "description": "Update task with good data by id",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PATCH",
+      "request_path": "/api/v1/projects/10/tasks/6",
+      "request_body": "task[content]=New+content",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[binary data]",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"919e83b43bec7fab4d6b19cf0388bce5\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ce22e0ce-2fd2-47fc-814b-d7d7a3cbe58d",
+        "X-Runtime": "0.008056",
+        "Content-Length": "58"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

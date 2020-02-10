@@ -2,8 +2,29 @@
   "resources": [
     {
       "name": "Projects",
-      "explanation": null,
+      "explanation": "Projects resource",
       "examples": [
+        {
+          "description": "Create a project with bad data",
+          "link": "projects/create_a_project_with_bad_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects",
+          "method": "post"
+        },
+        {
+          "description": "Create a project with good data",
+          "link": "projects/create_a_project_with_good_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects",
+          "method": "post"
+        },
+        {
+          "description": "Destroy project",
+          "link": "projects/destroy_project.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:id",
+          "method": "delete"
+        },
         {
           "description": "Get an project",
           "link": "projects/get_an_project.json",
@@ -12,11 +33,80 @@
           "method": "get"
         },
         {
-          "description": "Listing projects",
-          "link": "projects/listing_projects.json",
+          "description": "Getting a list of projects",
+          "link": "projects/getting_a_list_of_projects.json",
           "groups": "all",
           "route": "/api/v1/projects",
           "method": "get"
+        },
+        {
+          "description": "Project is not found",
+          "link": "projects/project_is_not_found.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:id",
+          "method": "get"
+        },
+        {
+          "description": "Update project with bad data",
+          "link": "projects/update_project_with_bad_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:id",
+          "method": "patch"
+        },
+        {
+          "description": "Update project with correct data",
+          "link": "projects/update_project_with_correct_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:id",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Create task with bad data",
+          "link": "tasks/create_task_with_bad_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks",
+          "method": "post"
+        },
+        {
+          "description": "Create task with good data",
+          "link": "tasks/create_task_with_good_data.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks",
+          "method": "post"
+        },
+        {
+          "description": "Get task by id",
+          "link": "tasks/get_task_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks/:task_id",
+          "method": "get"
+        },
+        {
+          "description": "Listing tasks of the project",
+          "link": "tasks/listing_tasks_of_the_project.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks",
+          "method": "get"
+        },
+        {
+          "description": "Update task with bad data by id",
+          "link": "tasks/update_task_with_bad_data_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks/:task_id",
+          "method": "patch"
+        },
+        {
+          "description": "Update task with good data by id",
+          "link": "tasks/update_task_with_good_data_by_id.json",
+          "groups": "all",
+          "route": "/api/v1/projects/:project_id/tasks/:task_id",
+          "method": "patch"
         }
       ]
     }

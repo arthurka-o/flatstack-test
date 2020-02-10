@@ -1,9 +1,9 @@
 {
   "resource": "Projects",
-  "resource_explanation": null,
-  "http_method": "GET",
-  "route": "/api/v1/projects",
-  "description": "Listing projects",
+  "resource_explanation": "Projects resource",
+  "http_method": "DELETE",
+  "route": "/api/v1/projects/:id",
+  "description": "Destroy project",
   "explanation": null,
   "parameters": [
 
@@ -13,26 +13,27 @@
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "/api/v1/projects",
-      "request_body": null,
+      "request_method": "DELETE",
+      "request_path": "/api/v1/projects/5",
+      "request_body": "{}",
       "request_headers": {
+        "Content-Type": "application/json",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
       },
-      "request_content_type": null,
+      "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"24888097845b301553f6fbc4267a9065\"",
+        "ETag": "W/\"44136fa355b3678a1146ad16f7e8649e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "46a00ce5-fdf2-47c0-bb01-8647210400dc",
-        "X-Runtime": "0.037391",
-        "Content-Length": "27"
+        "X-Request-Id": "12175a37-8462-4875-b4c6-c3f298d3d9af",
+        "X-Runtime": "0.032874",
+        "Content-Length": "2"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -1,28 +1,33 @@
 {
   "resource": "Projects",
   "resource_explanation": "Projects resource",
-  "http_method": "GET",
+  "http_method": "PATCH",
   "route": "/api/v1/projects/:id",
-  "description": "Get an project",
+  "description": "Update project with correct data",
   "explanation": null,
   "parameters": [
-
+    {
+      "scope": "project",
+      "with_example": true,
+      "required": true,
+      "name": "title",
+      "description": "The project title"
+    }
   ],
   "response_fields": [
 
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "/api/v1/projects/2",
-      "request_body": null,
+      "request_method": "PATCH",
+      "request_path": "/api/v1/projects/3",
+      "request_body": "{\"project\":{\"title\":\"Test title 2\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "{}": null
       },
       "request_content_type": "application/json",
       "response_status": 200,
@@ -30,11 +35,11 @@
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1ca4e6712e85c4a89b30929766e5170b\"",
+        "ETag": "W/\"fe65cef492c74908e99ea0fceb8016f0\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a09fe5f5-dde7-4f38-9f0d-906fdf54939d",
-        "X-Runtime": "0.008863",
-        "Content-Length": "23"
+        "X-Request-Id": "cf34f248-697a-4852-b8ce-97bbbebb628a",
+        "X-Runtime": "0.005693",
+        "Content-Length": "31"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

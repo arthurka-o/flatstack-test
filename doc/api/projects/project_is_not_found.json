@@ -3,7 +3,7 @@
   "resource_explanation": "Projects resource",
   "http_method": "GET",
   "route": "/api/v1/projects/:id",
-  "description": "Get an project",
+  "description": "Project is not found",
   "explanation": null,
   "parameters": [
 
@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/projects/2",
+      "request_path": "/api/v1/projects/xoxo",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -25,16 +25,15 @@
         "{}": null
       },
       "request_content_type": "application/json",
-      "response_status": 200,
-      "response_status_text": "OK",
+      "response_status": 404,
+      "response_status_text": "Not Found",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1ca4e6712e85c4a89b30929766e5170b\"",
-        "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a09fe5f5-dde7-4f38-9f0d-906fdf54939d",
-        "X-Runtime": "0.008863",
-        "Content-Length": "23"
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "416646d3-87d7-4a84-9287-2be4e12396e8",
+        "X-Runtime": "0.006562",
+        "Content-Length": "36"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

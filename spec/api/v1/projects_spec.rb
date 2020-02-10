@@ -1,82 +1,65 @@
 require 'rails_helper'
 
 resource 'Projects' do
-  explanation 'Projects resource'
+  explanation "Projects resource"
 
-  header 'Content-Type', 'application/json'
-  let(:raw_post) { params.to_json }
+  header "Content-Type", "application/json"
 
-  let(:project) { create :project }
+  let!(:project) { create :project, title: 'title' }
   let(:id) { project.id }
+  let(:last_project) { Project.last }
 
   get '/api/v1/projects' do
-    with_options scope: :projects do
-      response_field :name, "Name of order", :type => :string
-      response_field :paid, "If the order has been paid for", :type => :boolean
-      response_field :email, "Email of user that placed the order", :type => :string
-    end
-
     context '200' do
-      example_request 'Getting a list of projects' do
+      example 'Listing projects' do
+        do_request
+
         expect(status).to eq 200
+        expect(json_response_body.first).to be_a_project_representation(project)
       end
     end
   end
 
   post '/api/v1/projects' do
-    with_options scope: :project, with_example: true do
-      parameter :title, 'The project title', required: true
-    end
+    let!(:number_of_projects) { Project.count }
+    let(:number_of_projects_after_request) { Project.count }
 
     context '201' do
       let(:request) { { project: { title: 'Test title' } } }
-      let(:expected_response) do
-        {
-          id: 1,
-          title: 'Test title'
-        }
-      end
 
-      example 'Create a project with good data' do
+      example 'Create project with correct data' do
         do_request(request)
 
         expect(status).to eq 201
-        expect(json_response_body).to eq(expected_response)
+        expect(json_response_body).to be_a_project_representation(last_project)
+        expect(number_of_projects + 1).to eq(number_of_projects_after_request)
       end
     end
 
     context '400' do
       let(:request) { { project: { title: nil } } }
 
-      example 'Create a project with bad data' do
+      example 'Create project with bad data' do
         do_request(request)
 
         expect(status).to eq 400
+        expect(number_of_projects).to eq(number_of_projects_after_request)
       end
     end
   end
 
   get '/api/v1/projects/:id' do
     context '200' do
-      example_request 'Get an project' do
+      example 'Get an project' do
+        do_request
+
         expect(status).to eq(200)
-      end
-    end
-
-    context '404' do
-      let(:id) { 'xoxo' }
-
-      example_request 'Project is not found' do
-        expect(status).to eq(404)
+        expect(json_response_body).to be_a_project_representation(project)
       end
     end
   end
 
   patch '/api/v1/projects/:id' do
-    with_options scope: :project, with_example: true do
-      parameter :title, 'The project title', required: true
-    end
-
     context '200' do
       let(:request) { { project: { title: 'Test title 2' } } }
 
@@ -84,16 +67,19 @@ resource 'Projects' do
         do_request(request)
 
         expect(status).to eq 200
+        expect(project.reload.title).to eq('Test title 2')
       end
     end
 
     context '400' do
       let(:request) { { project: { title: nil } } }
+      let!(:old_title) { project.title }
 
       example 'Update project with bad data' do
         do_request(request)
 
         expect(status).to eq 400
+        expect(old_title).to eq(project.reload.title)
       end
     end
   end
@@ -104,6 +90,7 @@ resource 'Projects' do
         do_request
 
         expect(status).to eq 200
+        expect { project.reload }.to raise_exception(ActiveRecord::RecordNotFound)
       end
     end
   end

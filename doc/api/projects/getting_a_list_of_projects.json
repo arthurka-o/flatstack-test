@@ -2,8 +2,8 @@
   "resource": "Projects",
   "resource_explanation": "Projects resource",
   "http_method": "GET",
-  "route": "/api/v1/projects/:id",
-  "description": "Get an project",
+  "route": "/api/v1/projects",
+  "description": "Getting a list of projects",
   "explanation": null,
   "parameters": [
 
@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/projects/2",
+      "request_path": "/api/v1/projects",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -30,11 +30,11 @@
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1ca4e6712e85c4a89b30929766e5170b\"",
+        "ETag": "W/\"4f53cda18c2baa0c0354bb5f9a3ecbe5\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a09fe5f5-dde7-4f38-9f0d-906fdf54939d",
-        "X-Runtime": "0.008863",
-        "Content-Length": "23"
+        "X-Request-Id": "8f13da85-a561-4dad-8814-05d5b572974c",
+        "X-Runtime": "0.030334",
+        "Content-Length": "2"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

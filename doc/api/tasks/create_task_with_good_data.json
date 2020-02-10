@@ -1,0 +1,42 @@
+{
+  "resource": "Tasks",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/projects/:project_id/tasks",
+  "description": "Create task with good data",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/projects/7/tasks",
+      "request_body": "task[content]=Test+content",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "[binary data]",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"af7a7449afbfaabf4df13438f98d3d38\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c688944c-8d82-4c23-bc17-d45141ba3f3b",
+        "X-Runtime": "0.012681",
+        "Content-Length": "59"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
