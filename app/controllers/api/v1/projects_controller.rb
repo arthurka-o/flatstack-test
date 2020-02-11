@@ -14,7 +14,7 @@ class Api::V1::ProjectsController < ApiController
     if project.save
       success(project, 201)
     else
-      error(project.errors)
+      error(project.errors, 422)
     end
   end
 
@@ -22,13 +22,13 @@ class Api::V1::ProjectsController < ApiController
     if project.update(project_params)
       success(project)
     else
-      error(project.errors)
+      error(project.errors, 422)
     end
   end
 
   def destroy
     if project.destroy
-      success
+      success(nil, 204)
     else
       error(project.errors)
     end

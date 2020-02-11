@@ -15,7 +15,7 @@ class Api::V1::TasksController < ApiController
     if task.save
       success(task, 201)
     else
-      render json: task.errors, status: 400
+      error(task.errors, 422)
     end
   end
 
@@ -23,15 +23,7 @@ class Api::V1::TasksController < ApiController
     if task.update(task_params)
       success(task)
     else
-      error(task.errors)
-    end
-  end
-
-  def destroy
-    if task.destroy
-      success
-    else
-      error(task.errors)
+      error(task.errors, 422)
     end
   end
 
