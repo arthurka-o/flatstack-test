@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/projects/2",
+      "request_path": "/api/v1/projects/5",
       "request_body": null,
       "request_headers": {
         "Content-Type": "application/json",
@@ -30,11 +30,11 @@
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"1ca4e6712e85c4a89b30929766e5170b\"",
+        "ETag": "W/\"83bf49a2b418f0bb600e9470b3eccf9b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a09fe5f5-dde7-4f38-9f0d-906fdf54939d",
-        "X-Runtime": "0.008863",
-        "Content-Length": "23"
+        "X-Request-Id": "72d081f4-d9a5-418e-a249-aac4bf3ed76a",
+        "X-Runtime": "0.004003",
+        "Content-Length": "24"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

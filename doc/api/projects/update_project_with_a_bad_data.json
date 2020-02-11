@@ -1,21 +1,26 @@
 {
   "resource": "Projects",
   "resource_explanation": "Projects resource",
-  "http_method": "DELETE",
+  "http_method": "PATCH",
   "route": "/api/v1/projects/:id",
-  "description": "Destroy project",
+  "description": "Update project with a bad data",
   "explanation": null,
   "parameters": [
-
+    {
+      "required": true,
+      "scope": "project",
+      "name": "title",
+      "description": "The project title"
+    }
   ],
   "response_fields": [
 
   ],
   "requests": [
     {
-      "request_method": "DELETE",
-      "request_path": "/api/v1/projects/5",
-      "request_body": "{}",
+      "request_method": "PATCH",
+      "request_path": "/api/v1/projects/7",
+      "request_body": "{\"project\":{\"title\":null}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -24,16 +29,15 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 200,
-      "response_status_text": "OK",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"44136fa355b3678a1146ad16f7e8649e\"",
-        "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "12175a37-8462-4875-b4c6-c3f298d3d9af",
-        "X-Runtime": "0.032874",
-        "Content-Length": "2"
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "c462833b-bba5-4687-a683-57aab32b8a37",
+        "X-Runtime": "0.003065",
+        "Content-Length": "28"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

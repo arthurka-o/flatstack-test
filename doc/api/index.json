@@ -5,22 +5,22 @@
       "explanation": "Projects resource",
       "examples": [
         {
-          "description": "Create a project with bad data",
-          "link": "projects/create_a_project_with_bad_data.json",
+          "description": "Create project with a bad data",
+          "link": "projects/create_project_with_a_bad_data.json",
           "groups": "all",
           "route": "/api/v1/projects",
           "method": "post"
         },
         {
-          "description": "Create a project with good data",
-          "link": "projects/create_a_project_with_good_data.json",
+          "description": "Create project with a correct data",
+          "link": "projects/create_project_with_a_correct_data.json",
           "groups": "all",
           "route": "/api/v1/projects",
           "method": "post"
         },
         {
-          "description": "Destroy project",
-          "link": "projects/destroy_project.json",
+          "description": "Destroy the project",
+          "link": "projects/destroy_the_project.json",
           "groups": "all",
           "route": "/api/v1/projects/:id",
           "method": "delete"
@@ -40,22 +40,15 @@
           "method": "get"
         },
         {
-          "description": "Project is not found",
-          "link": "projects/project_is_not_found.json",
-          "groups": "all",
-          "route": "/api/v1/projects/:id",
-          "method": "get"
-        },
-        {
-          "description": "Update project with bad data",
-          "link": "projects/update_project_with_bad_data.json",
+          "description": "Update project with a bad data",
+          "link": "projects/update_project_with_a_bad_data.json",
           "groups": "all",
           "route": "/api/v1/projects/:id",
           "method": "patch"
         },
         {
-          "description": "Update project with correct data",
-          "link": "projects/update_project_with_correct_data.json",
+          "description": "Update project with a correct data",
+          "link": "projects/update_project_with_a_correct_data.json",
           "groups": "all",
           "route": "/api/v1/projects/:id",
           "method": "patch"
@@ -64,18 +57,18 @@
     },
     {
       "name": "Tasks",
-      "explanation": null,
+      "explanation": "Tasks resource",
       "examples": [
         {
-          "description": "Create task with bad data",
-          "link": "tasks/create_task_with_bad_data.json",
+          "description": "Create task with a good data",
+          "link": "tasks/create_task_with_a_good_data.json",
           "groups": "all",
           "route": "/api/v1/projects/:project_id/tasks",
           "method": "post"
         },
         {
-          "description": "Create task with good data",
-          "link": "tasks/create_task_with_good_data.json",
+          "description": "Create task with bad data",
+          "link": "tasks/create_task_with_bad_data.json",
           "groups": "all",
           "route": "/api/v1/projects/:project_id/tasks",
           "method": "post"

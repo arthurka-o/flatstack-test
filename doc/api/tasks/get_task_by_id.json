@@ -1,6 +1,6 @@
 {
   "resource": "Tasks",
-  "resource_explanation": null,
+  "resource_explanation": "Tasks resource",
   "http_method": "GET",
   "route": "/api/v1/projects/:project_id/tasks/:task_id",
   "description": "Get task by id",
@@ -14,15 +14,17 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/projects/9/tasks/5",
+      "request_path": "/api/v1/projects/12/tasks/5",
       "request_body": null,
       "request_headers": {
+        "Content-Type": "application/json",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
+        "{}": null
       },
-      "request_content_type": null,
+      "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
       "response_body": "[binary data]",
@@ -30,8 +32,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"3bdce5aafdb5754f48fa7cbbe8994e6a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "53b5a74f-6729-48b9-9c96-9eb017f4eacc",
-        "X-Runtime": "0.005348",
+        "X-Request-Id": "4f580cd4-3baa-4787-9d01-6970d4d35c3e",
+        "X-Runtime": "0.003487",
         "Content-Length": "51"
       },
       "response_content_type": "application/json; charset=utf-8",

@@ -30,11 +30,11 @@
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4f53cda18c2baa0c0354bb5f9a3ecbe5\"",
+        "ETag": "W/\"f0658a35c2fb88e270433cf26013ed49\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8f13da85-a561-4dad-8814-05d5b572974c",
-        "X-Runtime": "0.030334",
-        "Content-Length": "2"
+        "X-Request-Id": "6e652618-6d0d-4639-a337-16bdbd7ecfd7",
+        "X-Runtime": "0.022597",
+        "Content-Length": "26"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

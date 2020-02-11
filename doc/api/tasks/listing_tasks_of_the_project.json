@@ -1,6 +1,6 @@
 {
   "resource": "Tasks",
-  "resource_explanation": null,
+  "resource_explanation": "Tasks resource",
   "http_method": "GET",
   "route": "/api/v1/projects/:project_id/tasks",
   "description": "Listing tasks of the project",
@@ -14,15 +14,17 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/api/v1/projects/6/tasks",
+      "request_path": "/api/v1/projects/9/tasks",
       "request_body": null,
       "request_headers": {
+        "Content-Type": "application/json",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
+        "{}": null
       },
-      "request_content_type": null,
+      "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
       "response_body": "[binary data]",
@@ -30,8 +32,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"a73c30e9c6eaecb9e54eb05b7a2b0034\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "2bd1ac88-21b2-49c8-9c2c-c278e00a18a2",
-        "X-Runtime": "0.007249",
+        "X-Request-Id": "1b954b7b-6d45-4938-9c79-c9455934db28",
+        "X-Runtime": "0.006525",
         "Content-Length": "53"
       },
       "response_content_type": "application/json; charset=utf-8",

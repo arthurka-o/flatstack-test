@@ -1,12 +1,27 @@
 {
   "resource": "Tasks",
-  "resource_explanation": null,
+  "resource_explanation": "Tasks resource",
   "http_method": "POST",
   "route": "/api/v1/projects/:project_id/tasks",
   "description": "Create task with bad data",
   "explanation": null,
   "parameters": [
-
+    {
+      "scope": "task",
+      "required": true,
+      "name": "content",
+      "description": "Content of the task"
+    },
+    {
+      "scope": "task",
+      "name": "position",
+      "description": "Position of task in the project"
+    },
+    {
+      "scope": "task",
+      "name": "done",
+      "description": "Shows if task is marked as done"
+    }
   ],
   "response_fields": [
 
@@ -14,24 +29,24 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/v1/projects/8/tasks",
-      "request_body": "task[content]",
+      "request_path": "/api/v1/projects/11/tasks",
+      "request_body": "{\"task\":{\"content\":null}}",
       "request_headers": {
+        "Content-Type": "application/json",
         "Host": "example.org",
-        "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
       },
       "request_query_parameters": {
       },
-      "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 400,
-      "response_status_text": "Bad Request",
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "7686ae92-135d-42d1-b2b2-99142b73f5a1",
-        "X-Runtime": "0.006724",
+        "X-Request-Id": "59a6bca7-5abb-4452-bc96-cc87242093c1",
+        "X-Runtime": "0.004104",
         "Content-Length": "30"
       },
       "response_content_type": "application/json; charset=utf-8",

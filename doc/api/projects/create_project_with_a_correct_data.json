@@ -3,13 +3,12 @@
   "resource_explanation": "Projects resource",
   "http_method": "POST",
   "route": "/api/v1/projects",
-  "description": "Create a project with bad data",
+  "description": "Create project with a correct data",
   "explanation": null,
   "parameters": [
     {
-      "scope": "project",
-      "with_example": true,
       "required": true,
+      "scope": "project",
       "name": "title",
       "description": "The project title"
     }
@@ -21,7 +20,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/projects",
-      "request_body": "{\"project\":{\"title\":null}}",
+      "request_body": "{\"project\":{\"title\":\"Test title\"}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
@@ -30,15 +29,16 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 400,
-      "response_status_text": "Bad Request",
+      "response_status": 201,
+      "response_status_text": "Created",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-cache",
-        "X-Request-Id": "7646b78a-8ce7-4451-b2f1-24f4a2454f31",
-        "X-Runtime": "0.017914",
-        "Content-Length": "28"
+        "ETag": "W/\"88bdee84f1f84868d347a5ea8cbc6bd0\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ccf7d742-c0b5-4be9-92cb-dea6e7e255a6",
+        "X-Runtime": "0.002890",
+        "Content-Length": "29"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

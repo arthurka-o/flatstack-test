@@ -1,39 +1,43 @@
 {
   "resource": "Projects",
   "resource_explanation": "Projects resource",
-  "http_method": "GET",
-  "route": "/api/v1/projects/:id",
-  "description": "Project is not found",
+  "http_method": "POST",
+  "route": "/api/v1/projects",
+  "description": "Create project with a bad data",
   "explanation": null,
   "parameters": [
-
+    {
+      "required": true,
+      "scope": "project",
+      "name": "title",
+      "description": "The project title"
+    }
   ],
   "response_fields": [
 
   ],
   "requests": [
     {
-      "request_method": "GET",
-      "request_path": "/api/v1/projects/xoxo",
-      "request_body": null,
+      "request_method": "POST",
+      "request_path": "/api/v1/projects",
+      "request_body": "{\"project\":{\"title\":null}}",
       "request_headers": {
         "Content-Type": "application/json",
         "Host": "example.org",
         "Cookie": ""
       },
       "request_query_parameters": {
-        "{}": null
       },
       "request_content_type": "application/json",
-      "response_status": 404,
-      "response_status_text": "Not Found",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "416646d3-87d7-4a84-9287-2be4e12396e8",
-        "X-Runtime": "0.006562",
-        "Content-Length": "36"
+        "X-Request-Id": "005034f6-cebf-4371-8e67-76febea29b35",
+        "X-Runtime": "0.011456",
+        "Content-Length": "28"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

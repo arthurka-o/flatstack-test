@@ -1,6 +1,6 @@
 {
   "resource": "Tasks",
-  "resource_explanation": null,
+  "resource_explanation": "Tasks resource",
   "http_method": "PATCH",
   "route": "/api/v1/projects/:project_id/tasks/:task_id",
   "description": "Update task with bad data by id",
@@ -14,24 +14,24 @@
   "requests": [
     {
       "request_method": "PATCH",
-      "request_path": "/api/v1/projects/11/tasks/7",
-      "request_body": "task[content]",
+      "request_path": "/api/v1/projects/14/tasks/7",
+      "request_body": "{\"task\":{\"content\":null}}",
       "request_headers": {
+        "Content-Type": "application/json",
         "Host": "example.org",
-        "Content-Type": "application/x-www-form-urlencoded",
         "Cookie": ""
       },
       "request_query_parameters": {
       },
-      "request_content_type": "application/x-www-form-urlencoded",
-      "response_status": 400,
-      "response_status_text": "Bad Request",
+      "request_content_type": "application/json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
       "response_body": "[binary data]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "3eaaa560-d08d-4eae-9a5c-f2f0d003073a",
-        "X-Runtime": "0.006915",
+        "X-Request-Id": "a2d6a464-9107-4e21-9b81-7af9978f3098",
+        "X-Runtime": "0.004202",
         "Content-Length": "30"
       },
       "response_content_type": "application/json; charset=utf-8",
